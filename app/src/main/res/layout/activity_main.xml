@@ -8,19 +8,7 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <TextView
-            android:id="@+id/message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/title_home"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/background_light"
@@ -28,14 +16,30 @@
             >
 
         <com.google.android.material.bottomappbar.BottomAppBar
-                android:id="@+id/bottomAppBar"
-                style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+                android:id="@+id/bottom_app_bar"
+                style="@style/Widget.MaterialComponents.BottomAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:backgroundTint="@color/colorPrimary"
+                app:fabAlignmentMode="center"
+                app:fabAnimationMode="slide"
+                app:fabCradleMargin="10dp"
+                app:logoDescription="Пидор"
+                app:menu="@menu/menu_appbar"
+                app:navigationIcon="@drawable/ic_face" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_rfb"
+                app:backgroundTint="@color/colorPrimary"
+                app:borderWidth="10dp"
+                app:fabSize="auto"
+                app:layout_anchor="@id/bottom_app_bar"
+                app:maxImageSize="36dp"
+                app:rippleColor="@color/colorPrimary" />
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
