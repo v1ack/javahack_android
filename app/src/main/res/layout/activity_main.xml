@@ -15,6 +15,13 @@
             android:fitsSystemWindows="true"
             >
 
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
         <com.google.android.material.bottomappbar.BottomAppBar
                 android:id="@+id/bottom_app_bar"
                 style="@style/Widget.MaterialComponents.BottomAppBar"
@@ -38,11 +45,12 @@
                 android:elevation="0dp"
                 android:src="@drawable/ic_rfb"
                 app:backgroundTint="@color/colorPrimary"
-                app:borderWidth="10dp"
+                app:borderWidth="0dp"
                 app:elevation="0dp"
                 app:fabSize="auto"
                 app:layout_anchor="@id/bottom_app_bar"
                 app:maxImageSize="36dp"
+                app:pressedTranslationZ="10dp"
                 app:rippleColor="@color/colorPrimary" />
 
 
